@@ -224,4 +224,18 @@ DROP TABLE sales;
 SHOW TABLES;
 DESC sales;
 
-INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(1,3,
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(1, 3, 'kim', 2, 100000, 1);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(2, 12, 'yoon', 5, 40000, 2);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(3, 8, 'won', 1, 7000, 1);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(4, 5, 'kim', 10, 80000, 1);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(5, 11, 'park', 5, 15000, 2);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(6, 7, 'park', 30, 210000, 2);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(7, 1, 'yoon', 10, 100000, 1);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(8, 8, 'won',5, 35000, 2);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(9, 3, 'park', 2, 100000, 1);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(10, 7, 'yoon', 10, 70000, 1);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(11, 7, 'kim', 1, 7000, 2);
+INSERT INTO sales(pcode, gcode, id, qty, sprice, stype) VALUES(12, 12, 'won', 5, 40000, 2);
+
+DESC sales;
+SELECT * FROM sales;
