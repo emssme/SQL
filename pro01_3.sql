@@ -40,5 +40,15 @@ UPDATE qna SET par=qno WHERE lev=0 and qno =10;
 UPDATE qna SET par=10 WHERE qno=9;
 
 SELECT * FROM qna ORDER BY par DESC, lev ASC, qno ASC ;
+
+COMMIT;
+
+SELECT a.qno AS qno, a.title AS title, a.content AS content, a.author AS author, a.resdate AS resdate, a.cnt AS cnt, a.lev AS lev, a.par AS par, b.name AS NAME FROM qna a, member b WHERE a.author=b.id ORDER BY a.par DESC, a.lev ASC, a.qno ASC;
 -- 만약 외래키로 인해 발생한다
 -- 판매 테이블에서 묻고 답하기와 연관되어 있다. -> 판매테이블에서 묻고답하기 테이블의 qno 또는 author를 기준으로 참조하고 있음.
+COMMIT;
+
+
+CREATE VIEW qnalist AS (SELECT a.qno AS qno, a.title AS title, a.content AS content, a.author AS author, a.resdate AS resdate, a.cnt AS cnt, a.lev AS lev, a.par AS par, b.name AS NAME FROM qna a, member b WHERE a.author=b.id ORDER BY a.par DESC, a.lev ASC, a.qno ASC);
+
+SELECT * FROM qnalist;
