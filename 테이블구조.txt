@@ -1,0 +1,29 @@
+customer(고객)
+컬럼설명	컬럼명			컬럼형식			크기		제약조건
+고객id	customerid		가변 문자열		15		기본키
+고객명	customername	가변 문자열			50		널 값 허용안함
+고객구분	customertype		가변 문자열		50		널 값 허용안함
+국적		country			가변 문자열		50		널 값 허용안함
+도시		city				가변 문자열		50
+주		state			가변 문자열		50
+우편번호	postcode			정수
+지역구분	regiontype		가변 문자열		50
+
+buy(주문)
+컬럼설명	컬럼명			컬럼형식			크기		제약조건
+순번		seq				정수				10		primary key, 자동증가번호
+주문id	orderid			가변 문자열			15		널 값 허용안함
+주문일자	orderdate			날짜/시간
+배송일자	shipdate			날짜/시간
+고객id	customerid		가변 문자열			15
+제품id	productid			가변 문자열			15
+주문수량	quantity			정수				10
+할인금액	discount			십진수(10,2)		
+
+product(제품)
+컬럼설명	컬럼명			컬럼형식			크기		제약조건
+제품id	productid			가변 문자열			15		기본키		
+대분류명	bigcategory		가변 문자열			50		널 값 허용안함
+소분류명	subcaregory		가변 문자열			50
+제품명	productname		가변 문자열			100		널 값 허용안함
+가격		price			십진수(10,2)
