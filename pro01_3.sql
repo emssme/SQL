@@ -52,3 +52,9 @@ COMMIT;
 CREATE VIEW qnalist AS (SELECT a.qno AS qno, a.title AS title, a.content AS content, a.author AS author, a.resdate AS resdate, a.cnt AS cnt, a.lev AS lev, a.par AS par, b.name AS NAME FROM qna a, member b WHERE a.author=b.id ORDER BY a.par DESC, a.lev ASC, a.qno ASC);
 
 SELECT * FROM qnalist;
+
+-- 답변만 삭제
+DELETE FROM qna WHERE qno=?;
+-- 질문 삭제(해당 답변도 같이 삭제해야됨)
+DELETE frome qna WHERE par=?;
+
